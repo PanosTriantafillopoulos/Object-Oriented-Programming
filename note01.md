@@ -43,13 +43,38 @@ Therefore: You can start to manipulate how the object behaves when met with buil
 
 ## Slideshow #3 (U3L3)
 | Topic | Further Description |
+| ----- | ------------------- |
 | Inheritance | When an object or class is based on another class; where its features are from a parent class. Inheritance can have an hierarchy (branching like a tree) and/or be a hybrid: mixing the types of inheritances. Types: Single, Multiple, Multilevel|
+| Super() | is a built-in method for classes to refer their parent class. This prevents us from doing ParentClass.method(self)|
+| Polymorphism | Ideas: Different Classes (non-inherited) can have the same named methods (Simple) → Polymorphism Within a set of inherited classes have the same methods |
 
+✔️What can we do with Inheritance?
+- A child will receive all attributes and methods of the parent
+- A child can then enhance itself with new attributes and new methods
+- A child can OVERRIDE attributes and methods for their own liking/speciality
 
-✔️What can we do with Inheritance
+✔️ Types of Multiple Inheritances
+1. Multi-Generational: Grandparent → Parent → Child
+2. Multi-Parent (Not limited to two)
+3. Mixture of 1 and 2
+
 ```python
 # Inheritance Example
-
+#Parent
+class Person:
+  def __init__(self, name):
+  	self.__name = name 
+  
+  def getName(self):
+    return self.__name
+#Inherited Class
+class Student(Person):
+  def __init__(self, name, num):
+    Person.__init__(self, name)
+    self.__sNum = num
+  
+  def getStudentName(self):
+    return("%s: %s" % (self.__sNum,self.getName()))
 ```
 
 
@@ -75,3 +100,7 @@ def __repr__(self):
 __repr__ → Allows us to present a printable version of our object
 
 __str__ → Allows us to convert our object to a string
+
+If a child class inherits the parent class:
+The child does not need a new __init__() method UNLESS it requires new attributes
+The child does not need to reinstate the parent’s methods UNLESS you override them
