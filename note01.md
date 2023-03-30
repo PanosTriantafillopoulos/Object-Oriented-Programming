@@ -103,18 +103,37 @@ class Student(Person):
 ```
 
 ## Slideshow 4 (U3L4)
+| Topic | Further Description |
+| ----- | ------------------- |
+| Iterable Objects | Objects that we can iterate through like a sequence. (like strings and lists). To access values without indexing we used a for loop. The portion of the iterable object must be a sequence. Iterable doesn’t always mean indexable.
+
 
 
 
 ### Sidenotes
 - Create a class:
-```python
+1. First define the name of the class with the keyword: class
+2. In its code block (indentation) define its attributes
+3. Then you can assign a variable with an instantiation of the class to interact with it
+Make sure to use parentheses when calling the class name.
 
-```
-- Conceptual Difference:
-```python
+- Conceptual Differences:
+-OOP focuses on how to manipulate the data of the object rather than the logic required to manipulate them-
 
-```
+Procedure Oriented
+A human may require:
+- Calculations
+- Logical Evaluations
+- Complete Repetitive Tasks
+- Database
+
+OOP
+Creating a human object
+- What's their name
+- What's their address
+- What functions can this object have?
+
+
 - Class is a keyword that allows to create our own classes.
 - Double Underscores? These are key hidden features of Python that allow us to do some overwriting of Python features and hidden content
 - Initilization:
@@ -138,5 +157,5 @@ __repr__ → Allows us to present a printable version of our object
 __str__ → Allows us to convert our object to a string
 
 If a child class inherits the parent class:
-The child does not need a new __init__() method UNLESS it requires new attributes
-The child does not need to reinstate the parent’s methods UNLESS you override them
+The child does not need a new __init__() method UNLESS it requires new attributes.
+The child does not need to reinstate the parent’s methods UNLESS you override them.
