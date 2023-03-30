@@ -18,7 +18,32 @@ The following is a collection of my notes from this unit.
 - Overriding: Two methods with the same method name and parameters.
 
 ## Slideshow #1 (U3L1)
+| Topic | Further Description |
+| ----- | ------------------- |
+| Object | In CS: Object can be a variable, a data structure, a function, or a method; therefore, a location in memory having a value that can be referenced by an identifier In OOP: Similar to an object as in CS, an object in OOP is an instance of a class where this object can be either a variable, a function, a data structure or a combination of such.|
+| Object Oriented Programming (OOP) | Programming practice to design modular reusable software systems, OOP designs programs with creation of Objects, An approach that focuses on the definition of data rather than the input → processing → output logic (OOP vs procedure-oriented programming), The goal is to create an object that we can define and provide functionality to solve problems. |
+```python
+# Example class
+class Person:
+  def __init__(self, name):
+		self.name = name
+	#end of initialization
+	
+  def greet(self): # the self parameter is always required
+		print(“Hello, my name is”, self.name)
+	#end of greet
+#end of class Person
+```
 
+
+✔️In-depth Analysis of an Object
+
+__Reminder__: An object is an instance
+
+States: The characteristic, Measurable data of an object
+
+Behaviours: The available functionality of the object (what can it do?)
+Note: We call an objects data attributes and we call an objects code methods. 
 
 ## Slideshow #2 (U3L2)
 | Topic | Further Description |
@@ -77,8 +102,19 @@ class Student(Person):
     return("%s: %s" % (self.__sNum,self.getName()))
 ```
 
+## Slideshow 4 (U3L4)
 
-# Sidenotes and Small Important Details
+
+
+### Sidenotes
+- Create a class:
+```python
+
+```
+- Conceptual Difference:
+```python
+
+```
 - Class is a keyword that allows to create our own classes.
 - Double Underscores? These are key hidden features of Python that allow us to do some overwriting of Python features and hidden content
 - Initilization:
