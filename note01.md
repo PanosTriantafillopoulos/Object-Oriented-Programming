@@ -42,7 +42,15 @@ Therefore: You can start to manipulate how the object behaves when met with buil
 
 
 ## Slideshow #3 (U3L3)
+| Topic | Further Description |
+| Inheritance | When an object or class is based on another class; where its features are from a parent class. Inheritance can have an hierarchy (branching like a tree) and/or be a hybrid: mixing the types of inheritances. Types: Single, Multiple, Multilevel|
 
+
+✔️What can we do with Inheritance
+```python
+# Inheritance Example
+
+```
 
 
 ##Sidenotes and Small Important Details
@@ -50,9 +58,20 @@ Therefore: You can start to manipulate how the object behaves when met with buil
 - Double Underscores? These are key hidden features of Python that allow us to do some overwriting of Python features and hidden content
 - Initilization:
 ```python
-
+def __init__(self):
 ```
+The initialization method is executed as soon as an object of the class is instantiated.
+It helps us to do any initialization for the object’s attributes.
+self parameter is used to denote that the method is applied and accessible for the object itself.
+self will also treat its own attributes as local.
 - str stuff: 
 ```python
-
+# Example of __str__ and _repr__ methods that allow to express our objects are string outputs.
+def __str__(self):
+        return f"Point Objct: ({self.x}, {self.y})"
+def __repr__(self):
+        return self.__str__()
 ```
+__repr__ → Allows us to present a printable version of our object
+
+__str__ → Allows us to convert our object to a string
