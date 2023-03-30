@@ -1,6 +1,6 @@
 # Object Oriented Programming Notes 1
 
-The following is a collection of my notes from this unit.
+The following is a collection of my notes from the Object Oriented Programming unit.
 
 ## Definitions
 - Object Oriented Programming: Programming paradigm that focuses on the creation of custom classes for special objects
@@ -106,16 +106,32 @@ class Student(Person):
 | Topic | Further Description |
 | ----- | ------------------- |
 | Iterable Objects | Objects that we can iterate through like a sequence. (like strings and lists). To access values without indexing we used a for loop. The portion of the iterable object must be a sequence. Iterable doesn’t always mean indexable.
-
-
-
+| __ iter __() | Allows our object to be iterable, when invoked upon (ex. By a for loop), it will call the method. Commonly just returns itself. |
+| __ next __() | Allows us to get to the next value when we iterate through a sequence. |
+```python
+# Example usage of iter and next
+class Deck:
+	...Code...
+	def __iter__(self):
+		return self
+	def __next__(self):
+		self.__index += 1
+		if self.__index == len(self.__cards):
+			self.__index = -1
+			raise StopIteration
+		else:
+			return self.__cards[self.__index]
+	...Code...
+```
 
 ### Sidenotes
+Class is a keyword that allows to create our own classes.
 - Create a class:
 1. First define the name of the class with the keyword: class
 2. In its code block (indentation) define its attributes
 3. Then you can assign a variable with an instantiation of the class to interact with it
 Make sure to use parentheses when calling the class name.
+
 
 - Conceptual Differences:
 -OOP focuses on how to manipulate the data of the object rather than the logic required to manipulate them-
@@ -134,7 +150,8 @@ Creating a human object
 - What functions can this object have?
 
 
-- Class is a keyword that allows to create our own classes.
+
+
 - Double Underscores? These are key hidden features of Python that allow us to do some overwriting of Python features and hidden content
 - Initilization:
 ```python
@@ -159,3 +176,5 @@ __str__ → Allows us to convert our object to a string
 If a child class inherits the parent class:
 The child does not need a new __init__() method UNLESS it requires new attributes.
 The child does not need to reinstate the parent’s methods UNLESS you override them.
+
+Encapsulation is denoted by double underscores in the front of an attribute.
