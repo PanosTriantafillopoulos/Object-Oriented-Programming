@@ -78,7 +78,7 @@ class Student(Person):
 ```
 
 
-##Sidenotes and Small Important Details
+# Sidenotes and Small Important Details
 - Class is a keyword that allows to create our own classes.
 - Double Underscores? These are key hidden features of Python that allow us to do some overwriting of Python features and hidden content
 - Initilization:
