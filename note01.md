@@ -8,7 +8,7 @@ The following is a collection of my notes from the Object Oriented Programming u
 - Attribute: Variables/Data that belongs to the class
 - Method: Functions that the object can use and call for computation
 - Object: An instance of a class that can be used within a program. An object may have access to the attributes and methods for that class. 
-- Encapsulation (Information Hiding):
+- Encapsulation (Information Hiding): Restricting the access to the classes/objects’ certain attributes and methods.
 - Inheritance: Restricting the access to the classes/objects’ certain attributes and methods.
 - Single Inheritance: A subclass inheriting the features of a single superclass / parent class
 - Multiple Inheritnace: A subclass inheriting the features of  multiple parent classes
